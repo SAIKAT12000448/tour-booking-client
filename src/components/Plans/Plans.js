@@ -7,7 +7,10 @@ const Plans = () => {
     useEffect(()=>{
         fetch('https://gory-demon-52495.herokuapp.com/plans')
         .then(res=>res.json())
-        .then(data=>setPlans(data))
+        .then(data=>{
+        
+          setPlans(data)
+        })
 
     },[])
 
@@ -25,6 +28,7 @@ const Plans = () => {
       <div className="card-body">
         <h5 className="card-title">{plan.placeName}</h5>
         <p className="card-text">{plan.description.slice(0,120)}...........</p>
+        <h6 className="text-danger">{plan.status}</h6>
         <Link to={`/booking/${plan._id}`}><button type="button" className="btn btn-success fw-bold">Book Now</button></Link>
       </div>
     </div>

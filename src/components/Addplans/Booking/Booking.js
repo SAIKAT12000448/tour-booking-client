@@ -1,6 +1,7 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import useFirebase from '../../../Firebase/useFirebase';
+// import useFirebase from '../../../Firebase/useFirebase';
 import useAuth from '../../Hooks/useAuth';
 
 const Booking = () => {
@@ -8,11 +9,23 @@ const Booking = () => {
          const{planId}=useParams();
          const[getplan,setplan]=useState({});
          useEffect(()=>{
-            fetch(`http://localhost:5000/plans/${planId}`)
+            fetch(`https://gory-demon-52495.herokuapp.com/plans/${planId}`)
             .then(res=>res.json())
             .then(data=>setplan(data))
          },[])
 
+
+         const onBook=(id)=>{
+          axios.post(`https://gory-demon-52495.herokuapp.com/myplans/${user.displayname}`,id)
+     
+          .then(res=>{
+           console.log(res)
+              if(res.data.insertedId){
+                  alert('added successfully');
+                 
+              }
+          })
+         }
 
     return (
         <div className="container">
@@ -35,7 +48,7 @@ const Booking = () => {
     <li className="list-group-item">Address: {getplan.address}</li>         
     <li className="list-group-item">Phone: {getplan.number}</li>         
     <li className="list-group-item">Stipend: {getplan.price}</li>         
-    <button type="button" className="btn btn-dark fw-bolder">Book this now</button>        
+    <button onClick={onBook(planId)} type="button" className="btn btn-dark fw-bolder">Book this now</button>        
   </ul>
 </div>
 

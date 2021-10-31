@@ -8,6 +8,7 @@ const Addplans = () => {
 
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
+      data.status="pending"
       axios.post('https://gory-demon-52495.herokuapp.com/addplans',data)
      
       .then(res=>{

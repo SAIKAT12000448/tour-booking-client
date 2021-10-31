@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import AuthProvider from './components/Hooks/AuthProvider';
 import PrivateRoute from './components/Hooks/PrivateRoute';
 import Login from './components/Login/Login';
+import Manageall from './components/ManageAll/Manageall';
 import Mybooking from './components/Mybooking/Mybooking';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
@@ -37,7 +38,7 @@ function App() {
            <Mybooking></Mybooking>
         </PrivateRoute>
         <Route path='/manageorders'>
-          
+          <Manageall></Manageall>
         </Route>
       </Switch>
       <Footer></Footer>
