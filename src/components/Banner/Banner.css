@@ -1,0 +1,11 @@
+.banner {
+  background-image: url(https://i.ibb.co/gPZDkHf/Summer-camp-with-people-sitting-near-bonfire-Vector-cartoon-landscape-with-mountain-forest-and-camps.jpg);
+  height: 500px;
+  background-attachment: fixed;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.img-container img {
+  border-radius: 100px;
+}

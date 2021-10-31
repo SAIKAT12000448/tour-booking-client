@@ -8,6 +8,7 @@ import AuthProvider from './components/Hooks/AuthProvider';
 import PrivateRoute from './components/Hooks/PrivateRoute';
 import Login from './components/Login/Login';
 import Mybooking from './components/Mybooking/Mybooking';
+import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           
         </Route>
       </Switch>
+      <Footer></Footer>
       </BrowserRouter>
       </AuthProvider>
     </div>

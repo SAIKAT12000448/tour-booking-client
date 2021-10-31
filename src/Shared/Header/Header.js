@@ -12,7 +12,7 @@ const Header = () => {
 
 
     return (
-        <div className="header">
+        <div className="header  sticky-lg-top">
             <nav className="navbar navbar-expand-lg navbar-light">
   <div className="container-fluid ms-lg-5">
     {/* <a className="navbar-brand" href="#">Navbar</a> */}
@@ -24,12 +24,23 @@ const Header = () => {
         <li className="nav-item me-5 mt-2">
           <Link to="/home">Home</Link>
         </li>
-        <li className="nav-item me-5">
-          {/* <a className="nav-link" href="#">Link</a> */}
-        </li>
+       {
+         user?.displayName && 
+         <div className="d-flex">
+           <li className="nav-item me-5 mt-2 fw-bold">
+         <Link to="/mybookings">mybookings</Link>
+       </li>
+         <li className="nav-item me-5 mt-2 fw-bold">
+         <Link to="/addplan">ADD a New Plan</Link>
+       </li>
+         <li className="nav-item me-5 mt-2 fw-bold">
+         <Link to="/manageorders">Manage All Orders</Link>
+       </li>
+         </div>
+       }
 
         
-       { 
+       {/* { 
        user.displayName &&
        
        <li className="nav-item dropdown me-5">
@@ -43,7 +54,7 @@ const Header = () => {
             <li><hr className="dropdown-divider text-dark"/></li>
             <li><Link to='/manageorders' className="dropdown-item fw-bolder">Manage All Orders</Link></li>
           </ul>
-        </li>}
+        </li>} */}
 
 
         <li className="nav-item">

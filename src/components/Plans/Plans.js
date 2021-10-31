@@ -24,7 +24,7 @@ const Plans = () => {
       <img height="300px" src={plan.imgUrl} className="card-img-top" alt="..."/>
       <div className="card-body">
         <h5 className="card-title">{plan.placeName}</h5>
-        <p className="card-text">{plan.description.slice(0,-60)}...........</p>
+        <p className="card-text">{plan.description.slice(0,120)}...........</p>
         <Link to={`/booking/${plan._id}`}><button type="button" className="btn btn-success fw-bold">Book Now</button></Link>
       </div>
     </div>

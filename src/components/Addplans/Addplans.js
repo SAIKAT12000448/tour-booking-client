@@ -27,7 +27,10 @@ const Addplans = () => {
            <h3 className="text-center my-5">Add a New plans</h3>
            <div className="row text-center">
                <div className="col-md-6">
-             <h1>hello</h1>
+            
+                <img className="img-fluid" height="300px" src="https://i.ibb.co/0FyfH86/Summer-camp-with-people-sitting-near-bonfire-Vector-cartoon-landscape-with-mountain-forest-and-camps.jpg" alt="" />
+
+
                </div>
 
 
