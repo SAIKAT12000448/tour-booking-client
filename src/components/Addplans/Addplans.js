@@ -8,7 +8,7 @@ const Addplans = () => {
 
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
-      axios.post('http://localhost:5000/addplans',data)
+      axios.post('https://gory-demon-52495.herokuapp.com/addplans',data)
      
       .then(res=>{
        console.log(res)

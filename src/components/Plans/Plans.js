@@ -5,7 +5,7 @@ const Plans = () => {
     const[plans,setPlans]=useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/plans')
+        fetch('https://gory-demon-52495.herokuapp.com/plans')
         .then(res=>res.json())
         .then(data=>setPlans(data))
 
