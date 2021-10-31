@@ -12,10 +12,13 @@ const Manageall = () => {
               .then(res=>res.json())
               .then(data=>setplace(data));
           })
-
+         console.log(place)
     return (
         <div>
             <h1>place:{place.length}</h1>
+            {
+                
+            }
 
         </div>
     );
