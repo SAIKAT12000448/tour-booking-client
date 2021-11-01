@@ -3,6 +3,7 @@ import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
 import Addplans from './components/Addplans/Addplans';
 import Booking from './components/Addplans/Booking/Booking';
+import Bookinfo from './components/Bookinfo/Bookinfo';
 import Home from './components/Home/Home';
 import AuthProvider from './components/Hooks/AuthProvider';
 import PrivateRoute from './components/Hooks/PrivateRoute';
@@ -39,6 +40,9 @@ function App() {
         </PrivateRoute>
         <Route path='/manageorders'>
           <Manageall></Manageall>
+        </Route>
+        <Route path='/bookinfo'>
+          <Bookinfo></Bookinfo>
         </Route>
       </Switch>
       <Footer></Footer>
